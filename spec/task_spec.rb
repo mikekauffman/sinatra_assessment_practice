@@ -6,12 +6,12 @@ Capybara.app = App
 
 feature 'Access and manage homepage' do
 
-  scenario 'hompage displays welcome and link to create a new task' do
+  scenario 'hompage displays welcome and new tasks can be added to the list' do
   visit '/'
     expect(page).to have_content 'Welcome'
-    click_link 'Create Task'
+    click_link 'Add a Task'
     fill_in 'new_task', :with => 'Exercise'
-    click_on 'Create'
+    click_on 'Create Task'
     expect(page).to have_content 'Exercise'
   end
 

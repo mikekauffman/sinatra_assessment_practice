@@ -2,5 +2,8 @@
 <body>
 <h1>Welcome</h1>
 <a href="/task/new">Create Task</a>
+<% tasks.each do |task| %>
+<li><%= task %></li>
+    <% end %>
 </body>
 </html>

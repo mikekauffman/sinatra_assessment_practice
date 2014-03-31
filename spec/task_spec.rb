@@ -9,5 +9,6 @@ feature 'user manages the homepage' do
   scenario 'user visits the homepage and sees Welcome' do
     visit '/'
     expect(page).to have_content 'Welcome'
+    click_link 'Add a Task'
   end
 end
